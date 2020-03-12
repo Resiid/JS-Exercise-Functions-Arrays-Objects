@@ -142,8 +142,13 @@ function getName(name) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(input) {
+  for (let i = 0; i < input.length; i++){
+    if (input[i] === 'apple') {
+      return i;
+    }
+  }
+  return 0
 }
 
 /**
@@ -161,10 +166,17 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(input) {
+  let results = []
+for (var i = 0; i < input.length; i++) {
+  if (input[i] === `apple`) {
+  results.push(true)
+  }else{
+    results.push(false)
+  }
+  };
+  return results;
 }
-
 
 
 /*
@@ -220,6 +232,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
+  
   /* code here */
 }
 
