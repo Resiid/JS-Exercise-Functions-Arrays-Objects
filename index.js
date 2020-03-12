@@ -76,9 +76,14 @@ function temperatureCtoF(temp) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(temp, f) {
-  return temp + f;
-  /* code here */
+function temperatureInF(temp, type) {
+  if (type === 'F') {
+  return temp + type; 
+}
+  else { const c = temperatureCtoF(temp);
+
+   return c + 'F';
+ }
 }
 
 
@@ -98,12 +103,8 @@ function temperatureInF(temp, f) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(person) {
-   id: 5;
-   name: "Leia";
-   email: "leia@leia.com";
-}
-   return person;
+function makePersonObject(id, name, email) {
+  return {id,name,email};
 }
 
 
@@ -120,8 +121,9 @@ function makePersonObject(person) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(name) {
+  return `Hello, my name is ${name.name}`;
+
 }
 
 
